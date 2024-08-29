@@ -6,6 +6,8 @@ The PPSN Validator is a simple web application designed to validate Irish Person
 
 ![PPSN Validator Screenshot](https://github.com/codeitamarjr/IE-PPSN-Validator/blob/main/assets/PPSN-Validator-Validate-Irish-Personal-Public-Service-Numbers.png?raw=true)
 
+[![Latest GitHub Action](https://github.com/codeitamarjr/IE-PPSN-Validator/actions/workflows/static.yml/badge.svg)](https://github.com/codeitamarjr/IE-PPSN-Validator/actions/workflows/static.yml)
+
 ## Features
 
 - **Real-time Validation**: As users enter their PPSN, the tool checks for the correct format and validates the check digit.
