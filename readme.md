@@ -14,7 +14,7 @@ The PPSN Validator is a simple web application designed to validate Irish Person
 
 ## Demo
 
-You can see the PPSN Validator in action [here](https://codeitjunior.github.io/ie-ppsn-validator).
+You can see the PPSN Validator in action [here](https://codeitamarjr.github.io/IE-PPSN-Validator/).
 
 ## Installation
 
@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourgithubusername/ppsn-validator.git
+   git clone https://github.com/codeitamarjr/IE-PPSN-Validator.git
    ```
 
 2. **Navigate to the project directory**:
