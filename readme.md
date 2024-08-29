@@ -68,14 +68,22 @@ The application uses JavaScript to perform these validations in real-time.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-Contact
-For any questions or feedback, please feel free to contact the project maintainer:
+## Contact
 
-Name: Itamar Junior
-Email: <hello@itjunior.dev>
-Website: itjunior.dev
-Acknowledgements
-The design is powered by Tailwind CSS.
-If you find this tool useful, please consider giving the repository a star ⭐ on GitHub. Your support is greatly appreciated!
+For any questions, feedback, or collaboration inquiries, please feel free to reach out to the project maintainer:
+
+- **Name**: Itamar Junior
+- **Email**: [hello@itjunior.dev](mailto:hello@itjunior.dev)
+- **Website**: [itjunior.dev](https://itjunior.dev)
+- **LinkedIn**: [Itamar Junior on LinkedIn](https://www.linkedin.com/in/itamarjr)
+- **GitHub**: [Itamar Junior on GitHub](https://github.com/codeitamarjr)
+
+## Acknowledgements
+
+- The design is powered by [Tailwind CSS](https://tailwindcss.com/).
+
+## Support
+
+If you find this tool useful, please consider giving the repository a star ⭐ on [GitHub](https://github.com/codeitamarjr/IE-PPSN-Validator). Your support is greatly appreciated!
