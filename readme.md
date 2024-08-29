@@ -4,7 +4,7 @@
 
 The PPSN Validator is a simple web application designed to validate Irish Personal Public Service Numbers (PPSNs). The validator checks if a PPSN is correctly formatted and calculates the check digit to ensure its validity. This tool is useful for anyone who needs to verify PPSNs, whether for personal use or as part of a larger software system.
 
-![PPSN Validator Screenshot](screenshot.png)
+![PPSN Validator Screenshot](https://github.com/codeitamarjr/IE-PPSN-Validator/blob/main/assets/PPSN-Validator-Validate-Irish-Personal-Public-Service-Numbers.png?raw=true)
 
 ## Features
 
