@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="author" content="Itamar Junior" />
+    <meta name="contact" content="hello@itjunior.dev" />
+    <meta
+      name="description"
+      content="Use this PPSN Validator to easily verify the validity of Irish Personal Public Service Numbers. Enter any PPSN to check if it meets the required criteria."
+    />
+    <meta
+      name="keywords"
+      content="PPSN, Validator, Ireland PPSN, PPSN check, validate PPSN, Irish tax number validation"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="expires" content="0" />
+    <title>PPSN Validator - Validate Irish Personal Public Service Numbers</title>
+    <script>
+      // PPSN validation script
+      function validatePPSN(ppsn) {
+        // Remove any spaces or hyphens from the input
+        ppsn = ppsn.replace(/\s+/g, "").toUpperCase();
+
+        // Validate the format using a regular expression
+        const ppsnFormat = /^[0-9]{7}[A-W][ABWXTZ]?$/;
+        if (!ppsnFormat.test(ppsn)) {
+          return false;
+        }
+
+        // Extract the digits and characters
+        const digits = ppsn.slice(0, 7).split("").map(Number);
+        const checkChar = ppsn.charAt(7);
+        const secondChar = ppsn.length === 9 ? ppsn.charAt(8) : "";
+
+        // Calculate the sum using the weighted digits
+        const weights = [8, 7, 6, 5, 4, 3, 2];
+        let sum = 0;
+        for (let i = 0; i < 7; i++) {
+          sum += digits[i] * weights[i];
+        }
+
+        // Calculate the check character value
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const checkValue = alphabet.indexOf(checkChar) + 1;
+
+        // If there's a 9th character, add its weighted value
+        if (secondChar) {
+          const secondCharValue = alphabet.indexOf(secondChar) + 1;
+          sum += secondCharValue * 9;
+        }
+
+        // Calculate the modulus 23
+        const remainder = sum % 23;
+
+        // Determine the expected check character
+        const expectedCheckChar =
+          remainder === 0 ? "W" : alphabet[remainder - 1];
+
+        // Validate the check character
+        if (checkChar !== expectedCheckChar) {
+          return false;
+        }
+
+        // Validate the second character if it exists
+        if (
+          secondChar &&
+          !["A", "B", "W", "X", "T", "Z"].includes(secondChar)
+        ) {
+          return false;
+        }
+
+        // If all checks pass, return true
+        return true;
+      }
+
+      // Form validation handler
+      function validateForm() {
+        const ppsnInput = document.getElementById("ppsn").value;
+        if (!validatePPSN(ppsnInput)) {
+          alert("Invalid PPS Number");
+          return false;
+        }
+        alert("PPS Number is valid");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="dark:bg-gray-800">
+      <div class="dark:bg-transparent">
+        <div class="mx-auto flex flex-col items-center py-12 sm:py-24">
+          <div
+            class="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col mb-5 sm:mb-10"
+          >
+            <h1
+              class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl text-center text-gray-800 dark:text-white font-black leading-10"
+            >
+              Validate
+              <span class="text-green-800 dark:text-green-500"
+                >Irish PPS Number</span
+              >
+            </h1>
+            <p
+              class="mt-5 sm:mt-10 lg:w-10/12 text-gray-600 dark:text-gray-300 font-normal text-center text-xl"
+            >
+              A PPSN is a 9-digit number issued by the Government of Ireland. It
+              is used for tax and social welfare purposes. Enter a PPSN below to
+              validate it.
+            </p>
+          </div>
+          <form onsubmit="return validateForm()">
+            <div class="flex rounded-md w-full">
+              <label for="ppsn" class="sr-only">Enter PPS Number:</label>
+              <input
+                type="text"
+                id="ppsn"
+                name="ppsn"
+                required
+                class="w-full p-3 rounded-md rounded-r-none border border-2 border-gray-300 placeholder-current dark:bg-gray-500 dark:text-gray-300 dark:border-none"
+                placeholder="Enter PPS Number"
+              />
+              <button
+                type="submit"
+                class="inline-flex items-center gap-2 bg-green-700 text-white text-lg font-semibold py-3 px-6 rounded-r-md"
+              >
+                <span>Validate</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="bg-white rounded-lg shadow m-4 dark:bg-gray-800 dark:border-gray-700 fixed bottom-0 left-0 right-0"
+    >
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2024 Itamar Junior -
+          <a href="https://itjunior.dev" class="hover:underline">itjunior.dev</a
+          >.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+        >
+          <li>
+            <a href="mailto:hello@itjunior.dev" class="hover:underline"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
