@@ -17,7 +17,8 @@ The PPSN Validator is a simple web application designed to validate Irish Person
 
 ## How to use
 
-You can open the PPSN Validator at [here](https://codeitamarjr.github.io/IE-PPSN-Validator/). ** save it on your favourites for future use :D
+You can open the PPSN Validator at [here](https://codeitamarjr.github.io/IE-PPSN-Validator/).
+Save it on your favourites for future use :D
 
 ## How It Works
 
