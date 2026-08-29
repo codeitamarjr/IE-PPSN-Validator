@@ -15,47 +15,9 @@ The PPSN Validator is a simple web application designed to validate Irish Person
 - **Responsive Design**: The application is designed to be mobile-friendly, ensuring a seamless experience across devices.
 - **User-Friendly Interface**: The validator features a clean and intuitive interface, making it easy to use for everyone.
 
-## Demo
+## How to use
 
-You can see the PPSN Validator in action [here](https://codeitamarjr.github.io/IE-PPSN-Validator/).
-
-## Installation
-
-To run this project locally, follow these steps:
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/codeitamarjr/IE-PPSN-Validator.git
-   ```
-
-2. **Navigate to the project directory**:
-
-   ```bash
-   cd ppsn-validator
-   ```
-
-3. **Open the index.html file in your web browser**:
-
-   ```bash
-   open index.html
-   ```
-
-   Alternatively, you can use a local server to serve the file. For example, using Python's built-in HTTP server:
-
-   ```bash
-   python3 -m http.server
-   ```
-
-   Then navigate to [http://localhost:8000](http://localhost:8000) in your web browser.
-
-## Usage
-
-To validate a PPSN:
-
-Enter the PPSN into the input field.
-Click the "Validate" button.
-The tool will alert you whether the PPSN is valid or invalid based on the format and check digit calculation.
+You can open the PPSN Validator at [here](https://codeitamarjr.github.io/IE-PPSN-Validator/). ** save it on your favourites for future use :D
 
 ## How It Works
 
